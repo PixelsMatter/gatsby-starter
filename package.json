@@ -1,9 +1,9 @@
 {
-	"name": "gatsby-starter-default",
+	"name": "gatsby-template",
 	"private": true,
-	"description": "A simple starter to get up and developing quickly with Gatsby",
+	"description": "Template repository for Gatsby sites",
 	"version": "0.1.0",
-	"author": "Kyle Mathews <mathews.kyle@gmail.com>",
+	"author": "PixelsMatter <hello@pixelsmatter.io>",
 	"dependencies": {
 		"gatsby": "^2.26.1",
 		"gatsby-image": "^2.5.0",
@@ -22,7 +22,10 @@
 		"prettier": "2.2.1"
 	},
 	"keywords": [
-		"gatsby"
+		"gatsby",
+		"template",
+		"starter",
+		"pixelsmatter"
 	],
 	"license": "0BSD",
 	"scripts": {
@@ -36,9 +39,9 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/gatsbyjs/gatsby-starter-default"
+		"url": "https://github.com/PixelsMatter/gatsby-template"
 	},
 	"bugs": {
-		"url": "https://github.com/gatsbyjs/gatsby/issues"
+		"url": "https://github.com/PixelsMatter/gatsby-template/issues"
 	}
 }
