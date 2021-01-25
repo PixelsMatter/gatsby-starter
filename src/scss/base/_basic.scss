@@ -9,14 +9,10 @@ html {
 }
 
 body {
+	@include flex-container(column, center, center);
 	background: color('haiti');
 	min-height: 100%;
 	position: relative;
-
-	@include sm {
-		@include flex-container(column, center, center);
-		min-height: 100vh;
-	}
 }
 
 main {
