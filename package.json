@@ -1,26 +1,31 @@
 {
-	"name": "gatsby-template",
+	"name": "gatsby-starter",
 	"private": true,
-	"description": "Template repository for Gatsby sites",
+	"description": "The PixelsMatter Gatsby starter",
 	"version": "0.1.0",
 	"author": "PixelsMatter <hello@pixelsmatter.io>",
 	"dependencies": {
 		"gatsby": "^2.26.1",
 		"gatsby-image": "^2.5.0",
+		"gatsby-plugin-google-gtag": "^2.7.0",
 		"gatsby-plugin-manifest": "^2.6.1",
-		"gatsby-plugin-offline": "^3.8.0",
+		"gatsby-plugin-offline": "^3.4.0",
+		"gatsby-plugin-preact": "^4.5.0",
 		"gatsby-plugin-react-helmet": "^3.4.0",
 		"gatsby-plugin-sass": "^3.0.0",
 		"gatsby-plugin-sharp": "^2.8.0",
 		"gatsby-plugin-sitemap": "^2.10.0",
+		"gatsby-plugin-webfonts": "^1.1.4",
 		"gatsby-source-filesystem": "^2.5.0",
 		"gatsby-transformer-sharp": "^2.6.0",
-		"node-sass": "^5.0.0",
+		"preact": "^10.5.10",
+		"preact-render-to-string": "^5.1.12",
 		"prop-types": "^15.7.2",
 		"react": "^16.12.0",
 		"react-dom": "^16.12.0",
 		"react-helmet": "^6.1.0",
-		"sanitize.css": "^12.0.1"
+		"sanitize.css": "^12.0.1",
+		"sass": "^1.32.4"
 	},
 	"devDependencies": {
 		"prettier": "2.2.1"
@@ -36,16 +41,16 @@
 		"build": "gatsby build",
 		"develop": "gatsby develop",
 		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-		"start": "npm run develop",
+		"start": "npm run develop --https",
 		"serve": "gatsby serve",
 		"clean": "gatsby clean",
 		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/PixelsMatter/gatsby-template"
+		"url": "https://github.com/pixelsmatter/gatsby-starter"
 	},
 	"bugs": {
-		"url": "https://github.com/PixelsMatter/gatsby-template/issues"
+		"url": "https://github.com/pixelsmatter/gatsby-starter/issues"
 	}
 }

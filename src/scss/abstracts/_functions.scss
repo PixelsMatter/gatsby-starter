@@ -1,0 +1,55 @@
+
+/*
+* Convert pixels to rem units
+*/
+
+@function calc-rem($px) {
+	$rem: $px / $rem-root-px;
+  	@return #{$rem}rem;
+}
+
+
+/*
+* Get breakpoints from map/array
+*/
+
+@function breakpoint($breakpoint-key) {
+	@return map-get($breakpoints, $breakpoint-key);
+}
+
+
+/*
+* Get container gutters from map/array
+*/
+
+@function container-gutter($container-gutter-key) {
+	@return map-get($container-gutters, $container-gutter-key);
+}
+
+
+/*
+* Get fonts from map/array
+*/
+
+@function font($font-key) {
+	$font: map-get($fonts, $font-key);
+	@return unquote($font);
+}
+
+
+/*
+* Get z-indexes from map/array
+*/
+
+@function z-index($z-index-key) {
+	@return map-get($z-indexes, $z-index-key);
+}
+
+
+/*
+* Get colors from map/array
+*/
+
+@function color($color-key) {
+	@return map-get($colors, $color-key);
+}

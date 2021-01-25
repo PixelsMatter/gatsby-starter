@@ -1,0 +1,33 @@
+
+.btn {
+	background: color('purple-heart');
+	border-radius: calc-rem(30px);
+	color: color('white');
+	display: inline-block;
+	font-size: calc-rem(15px);
+	font-weight: 500;
+	letter-spacing: calc-rem(0.6px);
+	margin: calc-rem(30px) calc-rem(8px) 0;
+	max-width: calc-rem(150px);
+	padding: calc-rem(15px) calc-rem(20px);
+	transition: box-shadow 0.4s;
+	width: 100%;
+	will-change: box-shadow;
+
+	&:hover,
+	&:focus {
+		box-shadow: rgba(80, 63, 205, 0.5) 0px calc-rem(1px) calc-rem(20px);
+	}
+
+	@include sm {
+		font-size: calc-rem(16px);
+		max-width: calc-rem(190px);
+		padding: calc-rem(15px) calc-rem(30px);
+	}
+
+	@include md {
+		font-size: calc-rem(18px);
+		max-width: calc-rem(220px);
+		padding: calc-rem(15px) calc-rem(40px);
+	}
+}

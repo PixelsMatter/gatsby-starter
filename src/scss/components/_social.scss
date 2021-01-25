@@ -1,0 +1,32 @@
+
+.social {
+	display: flex;
+	justify-content: flex-end;
+
+	&__item {
+		margin: 0 calc-rem(2px);
+		opacity: 0.4;
+		transition: opacity 0.3s;
+		will-change: opacity;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover, &:focus {
+			opacity: 1;
+		}
+	}
+
+	&__link {
+		padding: calc-rem(6px);
+	}
+
+	&__icon {
+		width: calc-rem(24px);
+	}
+}

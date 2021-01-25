@@ -1,15 +1,20 @@
 
 import React from 'react'
+import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Container from '../components/container'
 
-const NotFoundPage = () => (
+const IndexPage = () => (
 	<Layout>
-		<SEO title="404: Not found" />
-		<h1>404: Not Found</h1>
-		<p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+		<SEO title="404" />
+		<Container>
+			<h1>Nothing To See Here</h1>
+			<p>Sorry, we can't seem to find the page you're looking for.</p><p>Click the button below and we'll take you back to the home page.</p>
+			<Link className="btn" to="/" target="_blank" rel="noreferrer">Home</Link>
+		</Container>
 	</Layout>
 )
 
-export default NotFoundPage
+export default IndexPage

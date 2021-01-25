@@ -1,21 +1,20 @@
 
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
 import SEO from '../components/seo'
+import Container from '../components/container'
+import Logo from '../components/logo'
 
 const IndexPage = () => (
 	<Layout>
-	<SEO title="Home" />
-		<h1>Hi people</h1>
-		<p>Welcome to your new Gatsby site.</p>
-		<p>Now go build something great.</p>
-		<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-			<Image />
-		</div>
-		<Link to="/page-2/">Go to page 2</Link>
+		<SEO />
+		<Container>
+			<Logo />
+			<p>This is a fresh instance of the PixelsMatter Gatsby starter which includes Preact, SCSS using a variant of 7-1 architecture, BEM, perfect Lighthouse scores, offline support, Google Analytics, sitemaps &amp; plenty more good stuff!</p>
+			<a className="btn" href="https://github.com/PixelsMatter/gatsby-template" target="_blank" rel="noreferrer">GitHub Repo</a>
+			<a className="btn" href="https://pixelsMatter.io" target="_blank" rel="noreferrer">Website</a>
+		</Container>
 	</Layout>
 )
 

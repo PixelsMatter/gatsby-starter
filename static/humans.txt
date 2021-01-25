@@ -12,28 +12,13 @@
 * Site: pixelsmatter.io                                               
 * Email: hello@pixelsmatter.io   
 *
-------------------------------------------------------- */
+--------------------------------------------------------*/
 
+# Team
+	Leon Burman - Founder & Full-Stack Web Developer 
 
-/*
-* Declare character set
-*/
-
-@charset 'UTF-8';
-
-
-/*
-* Using a variant of the 7-1 SCSS architecture                                   
-* Import root files; these will then import files from the relevant directory
-* Double underscore prefix is used to denote root files
-* Order of imports ensures we can use everything we need where we need to
-*/
-
-@import 
-	'abstracts/_abstracts',
-	'vendor/_vendor',
-	'base/_base',
-	'layouts/_layouts',
-	'components/_components',
-	'pages/_pages',
-	'themes/_themes';
+# Tech Stack
+	- Gatsby/React
+	- HTML5
+	- SASS/CSS3
+	- Git/GitHub
