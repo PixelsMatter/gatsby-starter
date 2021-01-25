@@ -1,0 +1,65 @@
+
+/*
+* Rem units root value
+*/
+
+$rem-root-px: 16px;
+
+
+/*
+* Breakpoints map/array
+* Small, medium, large & extra large
+*/
+
+$breakpoints: (
+	'sm': 576px,
+	'md': 768px,
+	'lg': 992px,
+	'xl': 1200px,
+);
+
+
+/*
+* Container gutters map/array
+* Extra small, small, medium, large & extra large
+*/
+
+$container-gutters: (
+	'xs': 15px,
+	'sm': 15px,
+	'md': 30px,
+	'lg': 30px,
+	'xl': 30px,
+);
+
+
+/*
+* Fonts map/array
+*/
+
+$fonts: (
+	'montserrat': 'Montserrat, sans-serif',
+);
+
+
+/*
+* Z-Indexes map/array
+* Keep track of z-indexes and prevent 1234, 9999, etc
+*/
+
+$z-indexes: (
+	'footer': 1000,
+);
+
+
+/*
+* Colors map/array
+*/
+
+$colors: (
+	'ghost': #C7CED6,
+	'haiti': #110719,
+	'heliotrope': #9059FF,
+	'purple-heart': #662CDC,
+	'white': #FFF,
+);

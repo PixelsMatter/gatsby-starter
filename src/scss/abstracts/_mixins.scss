@@ -1,0 +1,104 @@
+
+/*
+* Small devices breakpoint
+*/
+
+@mixin sm {
+	@media (min-width: #{breakpoint('sm')}) {
+		@content;
+	}
+}
+
+
+/*
+* Medium devices breakpoint
+*/
+
+@mixin md {
+	@media (min-width: #{breakpoint('md')}) {
+		@content;
+	}
+}
+
+/*
+* Large devices breakpoint
+*/
+
+@mixin lg {
+	@media (min-width: #{breakpoint('lg')}) {
+		@content;
+	}
+}
+
+
+/*
+* Extra large devices breakpoint
+*/
+
+@mixin xl {
+	@media (min-width: #{breakpoint('xl')}) {
+		@content;
+	}
+}
+
+
+/*
+* Center block elements
+*/
+
+@mixin push-auto () {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/*
+*  Quick pseudo elements
+*/
+
+@mixin pseudo($display: block, $position: absolute, $content: ''){
+	content: $content;
+	display: $display;
+	position: $position;
+}
+
+
+/*
+* Hardware acceleration
+*/
+
+@mixin hardware-accel($backface: true, $perspective: 1000) {
+	@if $backface {
+		backface-visibility: hidden;
+	}
+
+	perspective: $perspective;
+}
+
+
+/*
+* Flexbox container
+*/
+
+@mixin flex-container ($direction: row, $horizontal-alignment: false, $vertical-alignment: false) {
+	display: flex;
+	flex-direction: $direction;
+
+	@if $horizontal-alignment {
+		justify-content: $horizontal-alignment;
+	}
+
+	@if $vertical-alignment {
+		align-items: $vertical-alignment;
+	}
+}
+
+
+/*
+* Fill size of the container 
+*/
+
+@mixin size-fill() {
+	width: 100%;
+	height: 100%;
+}

@@ -1,32 +1,36 @@
 
 module.exports = {
 	siteMetadata: {
-		title: `Gatsby Default Starter`,
-		description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-		author: `@gatsbyjs`,
+		title: `PixelsMatter`,
+		description: `PixelsMatter Gatsby starter`,
+		author: `@pixelsmatter`,
 		siteUrl: `https://pixelsmatter.io`,
+		humans: `/humans.txt`,
 	},
 	plugins: [
+		`gatsby-plugin-preact`,
 		`gatsby-plugin-react-helmet`,
+		`gatsby-plugin-offline`,
+		`gatsby-transformer-sharp`,
+		`gatsby-plugin-sharp`,
+		`gatsby-plugin-sitemap`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `images`,
-				path: `${__dirname}/src/images`,
+				path: `${__dirname}/src/img`,
 			},
 		},
-		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sharp`,
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `gatsby-starter-default`,
-				short_name: `starter`,
+				name: `PixelsMatter`,
+				short_name: `<PM/>`,
 				start_url: `/`,
-				background_color: `#663399`,
-				theme_color: `#663399`,
+				background_color: `#110719`,
+				theme_color: `#110719`,
 				display: `minimal-ui`,
-				icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+				icon: `src/img/logo-icon.png`,
 			},
 		},
   		{
@@ -34,14 +38,47 @@ module.exports = {
     		options: {
       			sassOptions: {
       				data: `@import "${__dirname}/src/scss/vendor/vendor";`,
-					includePaths: ['node_modules'],
-      			}
+					includePaths: [`node_modules`],
+      			},
     		},
     	},
-		`gatsby-plugin-sitemap`,
-		`gatsby-plugin-offline`,
-		// this (optional) plugin enables Progressive Web App + Offline functionality
-		// To learn more, visit: https://gatsby.dev/offline
-		// `gatsby-plugin-offline`,
+		{
+			resolve: `gatsby-plugin-webfonts`,
+			options: {
+				fonts: {
+					google: [
+						{
+							family: `Montserrat`,
+							variants: [
+								`400`,
+								`500`,
+								`700`,
+							],
+						},
+					],
+				},
+			},
+		},
+		/* Uncomment for Google Analytics
+		{
+			resolve: `gatsby-plugin-google-gtag`,
+			options: {
+			    trackingIds: [
+			        `GA-TRACKING_ID`, // Google Analytics
+			        `AW-CONVERSION_ID`, // Google Ads / Adwords
+			        `DC-FLOODIGHT_ID`, // Marketing Platform advertising products
+			    ],
+			    gtagConfig: {
+			       	optimize_id: `OPT_CONTAINER_ID`,
+			        anonymize_ip: true,
+			       	cookie_expires: 0,
+			    },
+				pluginConfig: {
+			        head: false,
+			        respectDNT: true,
+			        exclude: [],
+			    },
+			},
+		}, */
 	],
 }

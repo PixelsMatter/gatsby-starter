@@ -1,0 +1,26 @@
+
+.container {
+	padding-left: container-gutter('xs');
+	padding-right: container-gutter('xs');
+	width: 100%;
+
+	@include sm {
+		padding-left: container-gutter('sm');
+		padding-right: container-gutter('sm');
+	}
+
+	@include md {
+		padding-left: container-gutter('md');
+		padding-right: container-gutter('md');
+	}
+
+	@include lg {
+		padding-left: container-gutter('lg');
+		padding-right: container-gutter('lg');
+	}
+
+	@include xl {
+		padding-left: container-gutter('xl');
+		padding-right: container-gutter('xl');
+	}
+}
