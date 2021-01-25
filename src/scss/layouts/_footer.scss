@@ -1,9 +1,12 @@
 
 .footer {
-	bottom: 0;
-	left: 0;
 	padding: calc-rem(30px) 0;
-	position: absolute;
-	width: 100%;
-	z-index: z-index('footer');
+
+	@include sm {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		z-index: z-index('footer');
+	}
 }
