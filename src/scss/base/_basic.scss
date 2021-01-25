@@ -6,17 +6,17 @@
 
 body {
 	background: color('haiti');
-	min-height: 100vh;
 	position: relative;
 
 	@include sm {
 		@include flex-container(column, center, center);
+		min-height: 100vh;
 	}
 }
 
 main {
 	max-width: calc-rem(960px);
-	padding: calc-rem(50px) 0 calc-rem(100px) 0;
+	padding: calc-rem(50px) 0 calc-rem(70px) 0;
 
 	@include sm {
 		padding: calc-rem(100px) 0 calc-rem(150px) 0;
