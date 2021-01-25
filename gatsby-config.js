@@ -24,8 +24,8 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `<PixelsMatter/>`,
-				short_name: `<PixelsMatter/>`,
+				name: `PixelsMatter`,
+				short_name: `PixelsMatter`,
 				start_url: `/`,
 				background_color: `#110719`,
 				theme_color: `#110719`,
