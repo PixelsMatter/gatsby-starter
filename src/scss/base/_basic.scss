@@ -4,8 +4,13 @@
 	background: color('heliotrope');
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	background: color('haiti');
+	min-height: 100%;
 	position: relative;
 
 	@include sm {
