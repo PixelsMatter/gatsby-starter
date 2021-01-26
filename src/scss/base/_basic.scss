@@ -10,7 +10,7 @@ html {
 
 body {
 	@include flex-container(column, center, center);
-	background: color('haiti');
+	background: color('violet');
 	min-height: 100%;
 	position: relative;
 }
