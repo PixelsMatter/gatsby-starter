@@ -13,18 +13,13 @@ module.exports = {
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		`gatsby-plugin-sitemap`,
+		`gatsby-plugin-offline`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `images`,
 				path: `${__dirname}/src/img`,
 			},
-		},
-		{
-			resolve: `gatsby-plugin-offline`,
-			options: {
-		    	precachePages: [`/`],
-		  	},
 		},
 		{
 			resolve: `gatsby-plugin-manifest`,
