@@ -10,7 +10,6 @@ module.exports = {
 	plugins: [
 		`gatsby-plugin-preact`,
 		`gatsby-plugin-react-helmet`,
-		`gatsby-plugin-offline`,
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		`gatsby-plugin-sitemap`,
@@ -20,6 +19,12 @@ module.exports = {
 				name: `images`,
 				path: `${__dirname}/src/img`,
 			},
+		},
+		{
+			resolve: `gatsby-plugin-offline`,
+			options: {
+		    	precachePages: [`/`],
+		  	},
 		},
 		{
 			resolve: `gatsby-plugin-manifest`,
