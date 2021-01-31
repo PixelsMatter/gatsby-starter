@@ -1,6 +1,6 @@
 
 .btn {
-	background: color('purple-heart');
+	background: linear-gradient(to right, color('purple'), color('persian-rose'));
 	border-radius: calc-rem(30px);
 	color: color('white');
 	display: inline-block;
@@ -13,6 +13,10 @@
 	transition: box-shadow 0.4s;
 	width: 100%;
 	will-change: box-shadow;
+
+	&--alt {
+		background: linear-gradient(to left, color('purple'), color('persian-rose'));
+	}
 
 	&:hover,
 	&:focus {
