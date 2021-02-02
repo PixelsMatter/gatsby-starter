@@ -14,13 +14,19 @@
 	width: 100%;
 	will-change: box-shadow;
 
-	&--alt {
-		background: linear-gradient(to left, color('purple'), color('persian-rose'));
-	}
-
 	&:hover,
 	&:focus {
-		box-shadow: rgba(80, 63, 205, 0.5) 0px calc-rem(1px) calc-rem(20px);
+		box-shadow: rgba(86, 11, 173, 0.7) 0px calc-rem(1px) calc-rem(20px);
+	}
+
+	&--alt {
+		background: linear-gradient(to left, color('purple'), color('persian-rose'));
+
+
+		&:hover,
+		&:focus {
+			box-shadow: rgba(247, 37, 133, 0.3) 0px calc-rem(1px) calc-rem(20px);
+		}
 	}
 
 	@include sm {
