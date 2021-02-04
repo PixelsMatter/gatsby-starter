@@ -2,10 +2,10 @@
 module.exports = {
 	siteMetadata: {
 		title: `PixelsMatter`,
-		description: `PixelsMatter Gatsby starter`,
+		description: `Gatsby starter`,
 		author: `@pixelsmatter`,
 		siteUrl: `https://pixelsmatter.io`,
-		humans: `/humans.txt`,
+		humans: `humans.txt`,
 	},
 	plugins: [
 		`gatsby-plugin-preact`,
