@@ -11,6 +11,8 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import socialPreview from '../img/social/preview.jpg'
+
 function SEO({ description, lang, meta, title }) {
  	const { site } = useStaticQuery(
  		graphql`
@@ -21,6 +23,7 @@ function SEO({ description, lang, meta, title }) {
 	 					description
 	 					author
 	 					humans
+	 					siteUrl
 	 				}
 	 			}
 	 		}
@@ -30,6 +33,8 @@ function SEO({ description, lang, meta, title }) {
  	const metaDescription = description || site.siteMetadata.description
  	const defaultTitle = site.siteMetadata?.title
  	const humans = site.siteMetadata.humans
+ 	const siteUrl = site.siteMetadata.siteUrl
+ 	const author = site.siteMetadata.author
 
  	return (
  		<Helmet
@@ -37,7 +42,7 @@ function SEO({ description, lang, meta, title }) {
  			lang,
  		}}
   		title={title ? title : defaultTitle}
-  		titleTemplate={title ? `${defaultTitle} | %s` : defaultTitle}
+  		titleTemplate={title ? `%s | ${defaultTitle}` : `${defaultTitle} | ${metaDescription}`}
  		meta={[
 	  		{
 	  			name: `format-detection`,
@@ -45,7 +50,7 @@ function SEO({ description, lang, meta, title }) {
 	  		},
 	  		{
 	  			name: `author`,
-	  			content: humans,
+	  			content: `${siteUrl}/${humans}`,
 	  		},
  			{
  				name: `description`,
@@ -53,27 +58,47 @@ function SEO({ description, lang, meta, title }) {
  			},
  			{
  				property: `og:title`,
- 				content: title,
+ 				content: title || defaultTitle,
  			},
  			{
  				property: `og:description`,
  				content: metaDescription,
  			},
  			{
+ 				property: `og:url`,
+ 				content: `${siteUrl}`,
+ 			},
+ 			{
+ 				property: `og:site_name`,
+ 				content: defaultTitle,
+ 			},
+ 			{
  				property: `og:type`,
  				content: `website`,
+ 			},
+ 			{
+ 				property: `og:locale`,
+ 				content: `en_GB`,
+ 			},
+ 			{
+ 				property: `og:image`,
+ 				content: socialPreview,
  			},
  			{
  				name: `twitter:card`,
  				content: `summary`,
  			},
  			{
+ 				name: `twitter:site`,
+ 				content: author || ``,
+ 			},
+ 			{
  				name: `twitter:creator`,
- 				content: site.siteMetadata?.author || ``,
+ 				content: author || ``,
  			},
  			{
  				name: `twitter:title`,
- 				content: title,
+ 				content: title || defaultTitle,
  			},
  			{
  				name: `twitter:description`,
