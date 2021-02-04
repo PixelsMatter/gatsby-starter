@@ -104,6 +104,10 @@ function SEO({ description, lang, meta, title }) {
  				name: `twitter:description`,
  				content: metaDescription,
  			},
+ 			{
+ 				property: `twitter:image:src`,
+ 				content: socialPreview,
+ 			},
  			].concat(meta)}
  		/>
  	)
