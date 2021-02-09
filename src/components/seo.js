@@ -84,7 +84,7 @@ function SEO({ description, lang, meta, title }) {
  			},
  			{
  				property: `og:image`,
- 				content: `${siteUrl} ${socialPreview}`,
+ 				content: `${siteUrl}${socialPreview}`,
  			},
  			{
  				property: `og:image:width`,
