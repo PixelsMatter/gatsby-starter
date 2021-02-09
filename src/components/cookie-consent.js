@@ -8,9 +8,14 @@ import classNames from 'classnames';
 import Container from '../components/container'
 
 class CookieConsent extends Component {
-	constructor() {
-		super()
-		this.state = {cookiesAccepted: Cookies.get('cookies-accepted')}
+	constructor(props) {
+		super(props)
+
+		this.state = {
+			cookiesAccepted: props.cookiesAccepted
+		}
+
+		this.handleClick = this.handleClick.bind(this)
 	}
 
 	handleClick() {
@@ -31,7 +36,7 @@ class CookieConsent extends Component {
 			<div className={classNames('cookie-consent', { 'cookie-consent--accepted': this.state.cookiesAccepted })}>
 				<Container>
 					<p className="cookie-consent__text">We use cookies to help deliver the best experience possible.</p>
-					<button className="cookie-consent__accept" onclick={this.handleClick.bind(this)}>Accept</button>
+					<button className="cookie-consent__accept" onclick={this.handleClick}>Accept</button>
 				</Container>
 			</div>
 		)
