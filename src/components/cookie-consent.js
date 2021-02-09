@@ -8,6 +8,11 @@ import classNames from 'classnames';
 import Container from '../components/container'
 
 class CookieConsent extends Component {
+	constructor() {
+		super()
+		this.state = {cookiesAccepted: Cookies.get('cookies-accepted')}
+	}
+
 	handleClick() {
 		var dateTime = new Date();
 
@@ -17,14 +22,16 @@ class CookieConsent extends Component {
 		Cookies.set('facebook-pixel-accepted', dateTime);
 
 		initializeAndTrack(useLocation);
+
+		this.setState({cookiesAccepted: true})
 	}
 
 	render() {
 		return (
-			<div className={classNames('cookie-consent', { 'cookie-consent--accepted': false })}>
+			<div className={classNames('cookie-consent', { 'cookie-consent--accepted': this.state.cookiesAccepted })}>
 				<Container>
 					<p className="cookie-consent__text">We use cookies to help deliver the best experience possible.</p>
-					<button className="cookie-consent__accept" onclick={this.handleClick}>Accept</button>
+					<button className="cookie-consent__accept" onclick={this.handleClick.bind(this)}>Accept</button>
 				</Container>
 			</div>
 		)

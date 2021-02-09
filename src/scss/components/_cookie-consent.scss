@@ -3,9 +3,12 @@
 	background: color('black');
 	left: 0;
 	padding: calc-rem(12px) 0;
+	opacity: 1;
 	position: fixed;
 	top: 0;
+	transition: opacity 0.4s;
 	width: 100%;
+	will-change: opacity;
 	z-index: z-index('cookie-consent');
 
 	& > .container {
@@ -39,6 +42,7 @@
 	}
 
 	&--accepted {
-		display: none;
+		opacity: 0;
+		pointer-events: none;
 	}
 }
