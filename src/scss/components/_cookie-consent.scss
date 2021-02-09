@@ -1,0 +1,44 @@
+
+.cookie-consent {
+	background: color('black');
+	left: 0;
+	padding: calc-rem(12px) 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: z-index('cookie-consent');
+
+	& > .container {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__text,
+	&__accept {
+		font-size: calc-rem(15px);
+		line-height: 1;
+	}
+
+	&__text {
+		margin: 0 calc-rem(5px) 0;
+	}
+
+	&__accept {
+		border-bottom: calc-rem(2px) solid color('purple');
+		font-weight: 500;
+		line-height: 1;
+		padding: 0;
+		transition: border-color 0.4s;
+		will-change: border-color;
+
+		&:hover,
+		&:focus {
+			border-color: color('persian-rose');
+		}
+	}
+
+	&--accepted {
+		display: none;
+	}
+}

@@ -1,0 +1,22 @@
+
+.js-notice {
+	background: color('black');
+	bottom: 0;
+	left: 0;
+	padding: calc-rem(12px) 0;
+	position: fixed;
+	width: 100%;
+	z-index: z-index('js-notice');
+
+	& > .container {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__text {
+		font-size: calc-rem(15px);
+		line-height: 1;
+		margin: 0;
+	}
+}

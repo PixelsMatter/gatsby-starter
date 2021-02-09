@@ -5,6 +5,7 @@ module.exports = {
 		description: `Gatsby starter`,
 		author: `@pixelsmatter`,
 		siteUrl: `https://pixelsmatter.io`,
+		domain: `pixelsmatter.io`,
 		humans: `humans.txt`,
 	},
 	plugins: [
@@ -59,26 +60,23 @@ module.exports = {
 				},
 			},
 		},
-		/* Uncomment for Google Analytics
 		{
-			resolve: `gatsby-plugin-google-gtag`,
+			resolve: `gatsby-plugin-gdpr-cookies`,
 			options: {
-			    trackingIds: [
-			        `GA-TRACKING_ID`, // Google Analytics
-			        `AW-CONVERSION_ID`, // Google Ads / Adwords
-			        `DC-FLOODIGHT_ID`, // Marketing Platform advertising products
-			    ],
-			    gtagConfig: {
-			       	optimize_id: `OPT_CONTAINER_ID`,
-			        anonymize_ip: true,
-			       	cookie_expires: 0,
-			    },
-				pluginConfig: {
-			        head: false,
-			        respectDNT: true,
-			        exclude: [],
-			    },
-			},
-		}, */
+				googleAnalytics: {
+	          		// trackingId: 'GOOGLE_ANALYTICS_TRACKING_ID',
+	          		cookieName: 'google-analytics-accepted',
+	      		},
+	    		googleTagManager: {
+	        		// trackingId: 'GOOGLE_TAG_MANAGER_TRACKING_ID',
+	          		cookieName: 'google-tag-manager-accepted',
+	      		},
+	      		facebookPixel: {
+	        		// pixelId: 'FACEBOOK_PIXEL_ID',
+	          		cookieName: 'facebook-pixel-accepted',
+	      		},
+	        	environments: ['production', 'development'],
+        	}
+    	},
 	],
 }
