@@ -48,7 +48,9 @@ $fonts: (
 */
 
 $z-indexes: (
+	'cookie-consent': 2000,
 	'footer': 1000,
+	'js-notice': 2000,
 );
 
 
@@ -57,6 +59,7 @@ $z-indexes: (
 */
 
 $colors: (
+	'black': #000000,
 	'ghost': #C7CED6,
 	'persian-rose': #F72585,
 	'purple': #560BAD,

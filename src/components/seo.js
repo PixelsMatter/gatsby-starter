@@ -35,6 +35,7 @@ function SEO({ description, lang, meta, title }) {
  	const humans = site.siteMetadata.humans
  	const siteUrl = site.siteMetadata.siteUrl
  	const author = site.siteMetadata.author
+ 	const domain = site.siteMetadata.domain
 
  	return (
  		<Helmet
@@ -54,7 +55,7 @@ function SEO({ description, lang, meta, title }) {
 	  		},
  			{
  				name: `description`,
- 				content: metaDescription,
+ 				content: metaDescription || ``,
  			},
  			{
  				property: `og:title`,
@@ -62,15 +63,15 @@ function SEO({ description, lang, meta, title }) {
  			},
  			{
  				property: `og:description`,
- 				content: metaDescription,
+ 				content: metaDescription || ``,
  			},
  			{
  				property: `og:url`,
- 				content: `${siteUrl}`,
+ 				content: siteUrl || ``,
  			},
  			{
  				property: `og:site_name`,
- 				content: defaultTitle,
+ 				content: defaultTitle  || ``,
  			},
  			{
  				property: `og:type`,
@@ -82,11 +83,19 @@ function SEO({ description, lang, meta, title }) {
  			},
  			{
  				property: `og:image`,
- 				content: socialPreview,
+ 				content: socialPreview || ``,
+ 			},
+ 			{
+ 				property: `og:image:width`,
+ 				content: 1200,
+ 			},
+ 			{
+ 				property: `og:image:height`,
+ 				content: 630,
  			},
  			{
  				name: `twitter:card`,
- 				content: `summary`,
+ 				content: `summary_large_image`,
  			},
  			{
  				name: `twitter:site`,
@@ -102,11 +111,19 @@ function SEO({ description, lang, meta, title }) {
  			},
  			{
  				name: `twitter:description`,
- 				content: metaDescription,
+ 				content: metaDescription || ``,
  			},
  			{
  				property: `twitter:image:src`,
- 				content: socialPreview,
+ 				content: socialPreview || ``,
+ 			},
+ 			{
+ 				property: `twitter:domain`,
+ 				content: domain || ``,
+ 			},
+ 			{
+ 				property: `twitter:url`,
+ 				content: siteUrl || ``,
  			},
  			].concat(meta)}
  		/>
