@@ -4,7 +4,7 @@ module.exports = {
 		title: `PixelsMatter`,
 		description: `Gatsby starter`,
 		author: `@pixelsmatter`,
-		siteUrl: `https://pixelsmatter.io`,
+		siteUrl: `https://pixelsmatter-gatsby-starter.netlify.app`,
 		domain: `pixelsmatter.io`,
 		humans: `humans.txt`,
 	},

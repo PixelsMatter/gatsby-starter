@@ -24,6 +24,7 @@ function SEO({ description, lang, meta, title }) {
 	 					author
 	 					humans
 	 					siteUrl
+	 					domain
 	 				}
 	 			}
 	 		}
@@ -83,7 +84,7 @@ function SEO({ description, lang, meta, title }) {
  			},
  			{
  				property: `og:image`,
- 				content: socialPreview || ``,
+ 				content: content: `${siteUrl}${socialPreview}`,
  			},
  			{
  				property: `og:image:width`,
@@ -115,7 +116,7 @@ function SEO({ description, lang, meta, title }) {
  			},
  			{
  				property: `twitter:image:src`,
- 				content: socialPreview || ``,
+ 				content: `${siteUrl}${socialPreview}`,
  			},
  			{
  				property: `twitter:domain`,
