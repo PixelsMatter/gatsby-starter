@@ -5,7 +5,7 @@ import { initializeAndTrack } from 'gatsby-plugin-gdpr-cookies'
 import Cookies from 'js-cookie'
 import classNames from 'classnames';
 
-import Container from '../components/Container'
+import Container from '../components/container'
 
 class CookieConsent extends Component {
 	constructor(props) {

@@ -1,8 +1,8 @@
 
 import React from 'react'
 
-import Container from './Container'
-import Social from './Social'
+import Container from './container'
+import Social from './social'
 
 const Footer = () => (
 	<footer className="footer">
