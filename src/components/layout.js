@@ -8,11 +8,11 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import Cookies from 'js-cookie'
 
-import CookieConsent from '../components/CookieConsent'
-import Footer from './Footer'
-import JsNotice from './JsNotice'
+import CookieConsent from '../components/cookie-consent'
+import Footer from './footer'
+import JsNotice from './js-notice'
+import Cookies from 'js-cookie'
 
 const Layout = ({ children }) => {
 
