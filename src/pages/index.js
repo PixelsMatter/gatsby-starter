@@ -1,10 +1,10 @@
 
 import React from 'react'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import Container from '../components/container'
-import Logo from '../components/logo'
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
+import Container from '../components/Container'
+import Logo from '../components/Logo'
 
 const IndexPage = () => (
 	<Layout>
