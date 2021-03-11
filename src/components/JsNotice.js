@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Components
 import Container from './Container'
 
 const JsNotice = () => (

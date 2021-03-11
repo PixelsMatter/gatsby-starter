@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Images
 import facebookPath from '../img/social/facebook.svg'
 import twitterPath from '../img/social/twitter.svg'
 import instagramPath from '../img/social/instagram.svg'

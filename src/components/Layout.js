@@ -9,6 +9,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Cookies from 'js-cookie'
 
+// Components
 import CookieConsent from './CookieConsent'
 import Footer from './Footer'
 import JsNotice from './JsNotice'

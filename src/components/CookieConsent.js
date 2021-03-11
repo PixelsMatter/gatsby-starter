@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import classNames from 'classnames';
 
+// Components
 import Container from './Container'
 
 class CookieConsent extends Component {
