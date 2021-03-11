@@ -10,6 +10,7 @@ import PropTypes from 'prop-types'
 import {Helmet} from 'react-helmet'
 import {graphql, useStaticQuery} from 'gatsby'
 
+// Images
 import socialPreview from '../img/social/preview.jpg'
 
 function SEO({description, lang, meta, title}) {

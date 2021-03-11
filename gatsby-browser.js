@@ -5,4 +5,5 @@
 * See: https://www.gatsbyjs.com/docs/browser-apis/
 */
 
+// Styles
 import './src/scss/style.scss'
