@@ -1,4 +1,3 @@
-
 /*
 * Small devices breakpoint
 */
@@ -46,7 +45,7 @@
 * Center block elements
 */
 
-@mixin push-auto () {
+@mixin push-auto() {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -56,7 +55,7 @@
 *  Quick pseudo elements
 */
 
-@mixin pseudo($display: block, $position: absolute, $content: ''){
+@mixin pseudo($display: block, $position: absolute, $content: '') {
 	content: $content;
 	display: $display;
 	position: $position;
@@ -80,7 +79,7 @@
 * Flexbox container
 */
 
-@mixin flex-container ($direction: row, $horizontal-alignment: false, $vertical-alignment: false) {
+@mixin flex-container($direction: row, $horizontal-alignment: false, $vertical-alignment: false) {
 	display: flex;
 	flex-direction: $direction;
 

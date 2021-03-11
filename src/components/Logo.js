@@ -1,6 +1,5 @@
-
 import React from 'react'
-import { Link } from 'gatsby'
+import {Link} from 'gatsby'
 
 import logoPath from '../img/pixelsmatter-logo.svg'
 
@@ -11,7 +10,7 @@ import logoPath from '../img/pixelsmatter-logo.svg'
 
 const Logo = () => (
 	<Link className="logo" to="/">
-		<img className="logo__img" width="450" height="56" src={logoPath} alt="PixelsMatter logo" />
+		<img className="logo__img" width="450" height="56" src={logoPath} alt="PixelsMatter logo"/>
 	</Link>
 )
 

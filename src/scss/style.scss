@@ -1,4 +1,3 @@
-
 /* --------------------------------------------------------
 *
 * ______ _          _     ___  ___      _   _            
@@ -29,11 +28,10 @@
 * Order of imports ensures we can use everything we need where we need to
 */
 
-@import 
-	'abstracts/_abstracts',
-	'vendor/_vendor',
-	'base/_base',
-	'layouts/_layouts',
-	'components/_components',
-	'pages/_pages',
-	'themes/_themes';
+@import 'abstracts/_abstracts',
+'vendor/_vendor',
+'base/_base',
+'layouts/_layouts',
+'components/_components',
+'pages/_pages',
+'themes/_themes';

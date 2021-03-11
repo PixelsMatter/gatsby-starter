@@ -1,4 +1,3 @@
-
 /*
 * Layout component that queries for data
 * with Gatsby's useStaticQuery component
@@ -14,14 +13,14 @@ import CookieConsent from './CookieConsent'
 import Footer from './Footer'
 import JsNotice from './JsNotice'
 
-const Layout = ({ children }) => {
+const Layout = ({children}) => {
 
 	return (
 		<>
-			<CookieConsent cookiesAccepted={Cookies.get('cookies-accepted')} />
+			<CookieConsent cookiesAccepted={Cookies.get('cookies-accepted')}/>
 			<main>{children}</main>
-			<JsNotice />
-			<Footer />
+			<JsNotice/>
+			<Footer/>
 		</>
 	)
 }

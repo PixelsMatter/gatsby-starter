@@ -1,11 +1,10 @@
-
 /*
 * Convert pixels to rem units
 */
 
 @function calc-rem($px) {
 	$rem: $px / $rem-root-px;
-  	@return #{$rem}rem;
+	@return #{$rem}rem;
 }
 
 

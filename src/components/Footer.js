@@ -1,4 +1,3 @@
-
 import React from 'react'
 
 import Container from './Container'
@@ -7,7 +6,7 @@ import Social from './Social'
 const Footer = () => (
 	<footer className="footer">
 		<Container>
-			<Social />
+			<Social/>
 		</Container>
 	</footer>
 )

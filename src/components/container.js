@@ -1,11 +1,9 @@
-
 import React from 'react'
 
-const Container = ({ children }) => (
+const Container = ({children}) => (
 	<div className="container">
-		{ children }
+		{children}
 	</div>
 )
 
 export default Container
-
