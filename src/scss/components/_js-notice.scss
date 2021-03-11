@@ -5,6 +5,7 @@
 	left: 0;
 	padding: calc-rem(12px) 0;
 	position: fixed;
+	text-align: left;
 	width: 100%;
 	z-index: z-index('js-notice');
 
@@ -16,7 +17,11 @@
 
 	&__text {
 		font-size: calc-rem(15px);
-		line-height: 1;
+		line-height: 1.4;
 		margin: 0;
+	}
+
+	@include sm {
+		text-align: center;
 	}
 }

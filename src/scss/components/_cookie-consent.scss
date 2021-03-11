@@ -5,6 +5,7 @@
 	padding: calc-rem(12px) 0;
 	opacity: 1;
 	position: fixed;
+	text-align: left;
 	top: 0;
 	transition: opacity 0.4s;
 	width: 100%;
@@ -20,11 +21,11 @@
 	&__text,
 	&__accept {
 		font-size: calc-rem(15px);
-		line-height: 1;
+		line-height: 1.4;
 	}
 
 	&__text {
-		margin: 0 calc-rem(5px) 0;
+		margin: 0 calc-rem(10px) 0;
 	}
 
 	&__accept {
@@ -33,6 +34,7 @@
 		line-height: 1;
 		padding: 0;
 		transition: border-color 0.4s;
+		white-space: nowrap;
 		will-change: border-color;
 
 		&:hover,
@@ -44,5 +46,9 @@
 	&--accepted {
 		opacity: 0;
 		pointer-events: none;
+	}
+
+	@include sm {
+		text-align: center;
 	}
 }
