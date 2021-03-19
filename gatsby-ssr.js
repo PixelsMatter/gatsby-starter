@@ -5,4 +5,13 @@
 * See: https://www.gatsbyjs.com/docs/ssr-apis/
 */
 
-// You can delete this file if you're not using it
+// Wrap page with App component
+import React from 'react'
+
+// Components
+import App from './src/components/App'
+
+// Wrap root with App component
+export const wrapRootElement = ({ element }) => (
+	<App>{element}</App>
+)
