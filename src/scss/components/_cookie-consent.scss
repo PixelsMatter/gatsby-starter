@@ -1,8 +1,12 @@
 
 .cookie-consent {
+	align-items: center;
 	background: color('black');
+	display: flex;
+	justify-content: center;
 	left: 0;
-	padding: calc-rem(12px) 0;
+	padding-bottom: calc-rem(12px);
+	padding-top: calc-rem(12px);
 	opacity: 1;
 	position: fixed;
 	text-align: left;
@@ -11,12 +15,6 @@
 	width: 100%;
 	will-change: opacity;
 	z-index: z-index('cookie-consent');
-
-	& > .container {
-		align-items: center;
-		display: flex;
-		justify-content: center;
-	}
 
 	&__text,
 	&__accept {
