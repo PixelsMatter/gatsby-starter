@@ -30,7 +30,7 @@ class CookieConsent extends React.Component {
 		])
 
 		return (
-			<ReactCookieConsent hideOnAccept={false} disableStyles={true} containerClasses={classes}
+			<ReactCookieConsent location='none' hideOnAccept={false} disableStyles={true} containerClasses={classes}
 			buttonClasses='cookie-consent__accept' buttonText='Accept' ariaAcceptLabel='Accept'
 			cookieName='cookies-accepted' cookieValue={new Date().toDateString()} onAccept={this.accept}>
 				<p className='cookie-consent__text'>We use cookies to help deliver the best experience possible.</p>
