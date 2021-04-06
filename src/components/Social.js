@@ -8,38 +8,45 @@ import instagramPath from '../img/social/instagram.svg'
 import linkedInPath from '../img/social/linkedin.svg'
 import gitHubPath from '../img/social/github.svg'
 
+// Social media platforms
+const items = [
+	{
+		title: 'Facebook',
+		url: 'https://facebook.com/pixelsmatter',
+		icon: facebookPath,
+	},
+	{
+		title: 'Twitter',
+		url: 'https://twitter.com/pixelsmatter',
+		icon: twitterPath,
+	},
+	{
+		title: 'Instagram',
+		url: 'https://instagram.com/pixelsmatter',
+		icon: instagramPath,
+	},
+	{
+		title: 'LinkedIn',
+		url: 'https://linkedin.com/company/pixelsmatter',
+		icon: linkedInPath,
+	},
+	{
+		title: 'GitHub',
+		url: 'https://github.com/pixelsmatter',
+		icon: gitHubPath,
+	},
+]
+
 const Social = () => (
 	<ul className='social'>
-		<li className='social__item'>
-			<a className='social__link' href='https://facebook.com/pixelsmatter' target='_blank' rel='noreferrer'
-			   title='Facebook'>
-				<img className='social__icon' width='24' height='24' src={facebookPath} alt='Facebook logo'/>
-			</a>
-		</li>
-		<li className='social__item'>
-			<a className='social__link' href='https://twitter.com/pixelsmatter' target='_blank' rel='noreferrer'
-			   title='Twitter'>
-				<img className='social__icon' width='24' height='24' src={twitterPath} alt='Twitter logo'/>
-			</a>
-		</li>
-		<li className='social__item'>
-			<a className='social__link' href='https://instagram.com/pixelsmatter' target='_blank' rel='noreferrer'
-			   title='Instagram'>
-				<img className='social__icon' width='24' height='24' src={instagramPath} alt='Instagram logo'/>
-			</a>
-		</li>
-		<li className='social__item'>
-			<a className='social__link' href='https://linkedin.com/company/pixelsmatter' target='_blank'
-			   rel='noreferrer' title='LinkedIn'>
-				<img className='social__icon' width='24' height='24' src={linkedInPath} alt='LinkedIn logo'/>
-			</a>
-		</li>
-		<li className='social__item'>
-			<a className='social__link' href='https://github.com/pixelsmatter' target='_blank' rel='noreferrer'
-			   title='GitHub'>
-				<img className='social__icon' width='24' height='24' src={gitHubPath} alt='GitHub logo'/>
-			</a>
-		</li>
+		{items.map((item, key) =>
+			<li className='social__item' key={key}>
+				<a className='social__link' href={item.url} target='_blank' rel='noreferrer'
+				   title={item.title}>
+					<img className='social__icon' width='24' height='24' src={item.icon} alt={`${item.title} logo`}/>
+				</a>
+			</li>
+		)}
 	</ul>
 )
 
