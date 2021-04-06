@@ -21,14 +21,14 @@ const items = [
 		icon: twitterPath,
 	},
 	{
-		title: 'Instagram',
-		url: 'https://instagram.com/pixelsmatter',
-		icon: instagramPath,
-	},
-	{
 		title: 'LinkedIn',
 		url: 'https://linkedin.com/company/pixelsmatter',
 		icon: linkedInPath,
+	},
+	{
+		title: 'Instagram',
+		url: 'https://instagram.com/pixelsmatter',
+		icon: instagramPath,
 	},
 	{
 		title: 'GitHub',
