@@ -5,7 +5,7 @@
 * See: https://www.gatsbyjs.com/docs/ssr-apis/
 */
 
-// Wrap page with App component
+// Libraries
 import React from 'react'
 
 // Components

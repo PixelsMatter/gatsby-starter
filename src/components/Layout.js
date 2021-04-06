@@ -5,6 +5,7 @@
 * See: https://www.gatsbyjs.com/docs/use-static-query/
 */
 
+// Libraries
 import React from 'react'
 import PropTypes from 'prop-types';
 
