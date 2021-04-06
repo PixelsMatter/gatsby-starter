@@ -1,20 +1,12 @@
-import React, {Component} from 'react'
-import classNames from 'classnames';
+import React from 'react'
+import ReactCookieConsent from 'react-cookie-consent';
 
-// Components
-import Container from './Container'
-
-class CookieConsent extends Component {
-	render() {
-		return (
-			<div className={classNames('cookie-consent', {'cookie-consent--accepted': ''})}>
-				<Container>
-					<p className="cookie-consent__text">We use cookies to help deliver the best experience possible.</p>
-					<button className="cookie-consent__accept">Accept</button>
-				</Container>
-			</div>
-		)
-	}
-}
+const CookieConsent = () => (
+	<ReactCookieConsent location="top" disableStyles={true} containerClasses="cookie-consent container"
+		buttonClasses="cookie-consent__accept" buttonText="Accept" ariaAcceptLabel="Accept"
+		cookieName='cookies-accepted' cookieValue={new Date().toDateString()}>
+		<p className="cookie-consent__text">We use cookies to help deliver the best experience possible.</p>
+	</ReactCookieConsent>
+)
 
 export default CookieConsent

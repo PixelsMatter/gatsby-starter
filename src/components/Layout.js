@@ -6,8 +6,7 @@
 */
 
 import React from 'react'
-import PropTypes from 'prop-types'
-import Cookies from 'js-cookie'
+import PropTypes from 'prop-types';
 
 // Components
 import CookieConsent from './CookieConsent'
@@ -18,7 +17,7 @@ const Layout = ({children}) => {
 
 	return (
 		<>
-			<CookieConsent cookiesAccepted={Cookies.get('cookies-accepted')}/>
+			<CookieConsent/>
 			<main>{children}</main>
 			<JsNotice/>
 			<Footer/>

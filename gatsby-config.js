@@ -65,15 +65,15 @@ module.exports = {
 			options: {
 				googleAnalytics: {
 	          		// trackingId: 'GOOGLE_ANALYTICS_TRACKING_ID',
-	          		cookieName: 'google-analytics-accepted',
+	          		cookieName: 'cookies-accepted',
 	      		},
 	    		googleTagManager: {
 	        		// trackingId: 'GOOGLE_TAG_MANAGER_TRACKING_ID',
-	          		cookieName: 'google-tag-manager-accepted',
+	          		cookieName: 'cookies-accepted',
 	      		},
 	      		facebookPixel: {
 	        		// pixelId: 'FACEBOOK_PIXEL_ID',
-	          		cookieName: 'facebook-pixel-accepted',
+	          		cookieName: 'cookies-accepted',
 	      		},
 	        	environments: ['production', 'development'],
         	}
