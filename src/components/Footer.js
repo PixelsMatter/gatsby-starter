@@ -6,7 +6,7 @@ import Container from './Container'
 import Social from './Social'
 
 const Footer = () => (
-	<footer className="footer">
+	<footer className='footer'>
 		<Container>
 			<Social/>
 		</Container>
