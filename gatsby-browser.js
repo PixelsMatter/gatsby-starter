@@ -5,6 +5,7 @@
 * See: https://www.gatsbyjs.com/docs/browser-apis/
 */
 
+// Libraries
 import React from 'react'
 
 // Styles
