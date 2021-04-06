@@ -7,7 +7,7 @@
 	left: 0;
 	padding-bottom: calc-rem(12px);
 	padding-top: calc-rem(12px);
-	opacity: 1;
+	opacity: 0;
 	position: fixed;
 	text-align: left;
 	top: 0;
@@ -39,6 +39,10 @@
 		&:focus {
 			border-color: color('persian-rose');
 		}
+	}
+
+	&--loaded {
+		opacity: 1;
 	}
 
 	&--accepted {

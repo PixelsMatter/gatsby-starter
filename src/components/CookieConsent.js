@@ -7,7 +7,11 @@ class CookieConsent extends React.Component {
 	constructor(props) {
 		super(props)
 
-		this.state = {accepted: false}
+		this.state = {
+			loaded: true,
+			accepted: false,
+		}
+
 		this.accept = this.accept.bind(this)
 	}
 
@@ -19,7 +23,10 @@ class CookieConsent extends React.Component {
 		let classes = Classnames([
 			'cookie-consent',
 			'container',
-			{'cookie-consent--accepted': this.state.accepted},
+			{
+				'cookie-consent--loaded': this.state.loaded,
+				'cookie-consent--accepted': this.state.accepted,
+			},
 		])
 
 		return (
