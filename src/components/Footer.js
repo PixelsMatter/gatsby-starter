@@ -7,7 +7,7 @@ import Social from './Social'
 
 const Footer = () => (
 	<footer className='footer'>
-		<Container>
+		<Container fullWidth>
 			<Social/>
 		</Container>
 	</footer>

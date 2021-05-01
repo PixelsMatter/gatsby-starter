@@ -23,6 +23,7 @@ class CookieConsent extends React.Component {
 		let classes = Classnames([
 			'cookie-consent',
 			'container',
+			'container--full-width',
 			{
 				'cookie-consent--loaded': this.state.loaded,
 				'cookie-consent--accepted': this.state.accepted,
