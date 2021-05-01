@@ -12,6 +12,7 @@
 	padding: calc-rem(15px) calc-rem(20px);
 	transition: box-shadow 0.4s;
 	width: 100%;
+	white-space: nowrap;
 	will-change: box-shadow;
 
 	&:hover,
