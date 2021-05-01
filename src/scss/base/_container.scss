@@ -1,8 +1,13 @@
 
 .container {
+	max-width: calc-rem(960px);
 	padding-left: container-gutter('xs');
 	padding-right: container-gutter('xs');
 	width: 100%;
+
+	&--full-width {
+		max-width: none;
+	}
 
 	@include sm {
 		padding-left: container-gutter('sm');

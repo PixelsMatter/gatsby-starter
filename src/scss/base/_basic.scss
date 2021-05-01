@@ -16,7 +16,6 @@ body {
 }
 
 main {
-	max-width: calc-rem(960px);
 	padding: calc-rem(50px) 0 calc-rem(90px) 0;
 
 	@include sm {
