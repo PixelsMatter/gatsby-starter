@@ -49,6 +49,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-webfonts`,
 			options: {
+				usePreconnect: true,
 				fonts: {
 					google: [
 						{
