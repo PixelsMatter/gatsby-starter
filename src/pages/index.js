@@ -2,13 +2,11 @@ import React from 'react'
 
 // Components
 import Layout from '../components/Layout'
-import SEO from '../components/SEO'
 import Container from '../components/Container'
 import Logo from '../components/Logo'
 
 const IndexPage = () => (
 	<Layout>
-		<SEO/>
 		<Container>
 			<Logo/>
 			<p>This is a fresh instance of the PixelsMatter Gatsby starter which includes Preact, SCSS using a variant
