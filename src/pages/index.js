@@ -10,7 +10,7 @@ const IndexPage = () => (
 		<Container>
 			<Logo/>
 			<p>This is a fresh instance of the PixelsMatter Gatsby starter which includes Preact, SCSS using a variant
-				of 7-1 architecture, BEM, perfect Lighthouse scores, offline support, Google Tag Manager,
+				of 7-1 architecture, BEM, Lighthouse CI, Google Tag Manager,
 				sitemaps &amp; plenty more good stuff!</p>
 			<a className='btn' href='https://github.com/PixelsMatter/gatsby-template' target='_blank' rel='noreferrer'>GitHub
 				Repo</a>
