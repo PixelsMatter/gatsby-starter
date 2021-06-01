@@ -14,7 +14,7 @@ import {graphql, useStaticQuery} from 'gatsby'
 // Images
 import socialPreview from '../img/social/preview.jpg'
 
-function SEO({description, lang, meta, title}) {
+function SEO({description, lang, meta, title, schemaMarkup}) {
 	const {site} = useStaticQuery(
 		graphql`
 	 		query {
@@ -26,18 +26,37 @@ function SEO({description, lang, meta, title}) {
 	 					humans
 	 					siteUrl
 	 					domain
+	 					orgName
+	 					orgAlternateName
+	 					socialLinks
+	 					logo
 	 				}
 	 			}
 	 		}
  		`
 	)
 
-	const metaDescription = description || site.siteMetadata.description
-	const defaultTitle = site.siteMetadata?.title
-	const humans = site.siteMetadata.humans
-	const siteUrl = site.siteMetadata.siteUrl
-	const author = site.siteMetadata.author
-	const domain = site.siteMetadata.domain
+	const metaDescription = description || site.siteMetadata.description,
+	defaultTitle = site.siteMetadata?.title,
+	humans = site.siteMetadata.humans,
+	siteUrl = site.siteMetadata.siteUrl,
+	author = site.siteMetadata.author,
+	domain = site.siteMetadata.domain,
+	orgName = site.siteMetadata.orgName,
+	orgAlternateName = site.siteMetadata.orgAlternateName,
+	logo = site.siteMetadata.logo,
+	socialLinks = site.siteMetadata.socialLinks
+
+	schemaMarkup = schemaMarkup ? schemaMarkup : {
+		'@context': 'https://schema.org',
+		'@type': 'Organization',
+		'name': orgName,
+		'alternateName': orgAlternateName,
+		'description': metaDescription,
+		'url': siteUrl,
+		'logo': `${siteUrl}/${logo}`,
+		'sameAs': socialLinks,
+	}
 
 	return (
 		<Helmet
@@ -128,7 +147,11 @@ function SEO({description, lang, meta, title}) {
 					content: siteUrl || ``,
 				},
 			].concat(meta)}
-		/>
+		>
+			<script type='application/ld+json'>
+				{JSON.stringify(schemaMarkup)}
+			</script>
+		</Helmet>
 	)
 }
 
