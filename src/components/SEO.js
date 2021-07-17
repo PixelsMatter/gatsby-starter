@@ -1,61 +1,96 @@
-/*
-* SEO component that queries for data with
-*  Gatsby's useStaticQuery React hook
-*
-* See: https://www.gatsbyjs.com/docs/use-static-query/
-*/
-
 // Libraries
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Helmet} from 'react-helmet'
 import {graphql, useStaticQuery} from 'gatsby'
 
-// Images
-import socialPreview from '../img/social/preview.jpg'
-
-function SEO({description, lang, meta, title, schemaMarkup}) {
-	const {site} = useStaticQuery(
+function SEO({meta, title, description, lang, thumbnail, openGraph, twitterCard, schemaMarkup}) {
+	const {site, defaultThumbnail} = useStaticQuery(
 		graphql`
 	 		query {
 	 			site {
 	 				siteMetadata {
 	 					title
 	 					description
-	 					author
-	 					humans
 	 					siteUrl
-	 					domain
-	 					orgName
-	 					orgAlternateName
-	 					socialLinks
-	 					logo
+	 					humansTxt
+	 					openGraph {
+	 						type
+	 						title
+	 						description
+	 						siteName
+	 						url
+	 					}
+	 					twitterCard {
+	 						card
+	 						title
+	 						description
+	 						creator
+	 						site
+	 						domain
+	 						url
+	 					}
 	 				}
 	 			}
+	 			defaultThumbnail: file(relativePath: { eq: "thumbnail.jpg" }) {
+ 					childImageSharp {
+ 						sizes(maxWidth: 1200) {
+ 							...GatsbyImageSharpSizes
+ 						}
+ 					}
+ 				}
 	 		}
  		`
 	)
 
-	const metaDescription = description || site.siteMetadata.description,
-	defaultTitle = site.siteMetadata?.title,
-	humans = site.siteMetadata.humans,
-	siteUrl = site.siteMetadata.siteUrl,
-	author = site.siteMetadata.author,
-	domain = site.siteMetadata.domain,
-	orgName = site.siteMetadata.orgName,
-	orgAlternateName = site.siteMetadata.orgAlternateName,
-	logo = site.siteMetadata.logo,
-	socialLinks = site.siteMetadata.socialLinks
+	const siteMetadata = site?.siteMetadata,
+	_title = title ? `${title} | ${siteMetadata?.title}` : siteMetadata?.title,
+	_description = description || siteMetadata?.description,
+	_thumbnail = defaultThumbnail.childImageSharp.sizes.src || thumbnail,
+	siteUrl = siteMetadata?.siteUrl || '',
+	humansTxt = siteMetadata?.humansTxt || ''
 
-	schemaMarkup = schemaMarkup ? schemaMarkup : {
-		'@context': 'https://schema.org',
-		'@type': 'Organization',
-		'name': orgName,
-		'alternateName': orgAlternateName,
-		'description': metaDescription,
-		'url': siteUrl,
-		'logo': `${siteUrl}/${logo}`,
-		'sameAs': socialLinks,
+	// Get current page Open Graph data or fallback
+	const _openGraph = {
+		type: openGraph?.type || siteMetadata?.openGraph?.type || '',
+		title: openGraph?.title || siteMetadata?.openGraph?.title || _title || '',
+		siteName: openGraph?.siteName || siteMetadata?.openGraph?.siteName || '',
+		description: openGraph?.description || siteMetadata?.openGraph?.description || _description || '',
+		url: openGraph?.url || siteMetadata?.openGraph?.url || '',
+		locale: openGraph?.locale || siteMetadata?.openGraph?.locale || 'en_GB',
+		image: openGraph?.image || siteMetadata?.openGraph?.image || '',
+		imageWidth: openGraph?.imageWidth || siteMetadata?.openGraph?.imageWidth || '1200',
+		imageHeight: openGraph?.imageHeight || siteMetadata?.openGraph?.imageHeight || '630',
+	}
+
+	// Get current page Twitter Card data or fallback
+	const _twitterCard = {
+		card: twitterCard?.card || siteMetadata?.twitterCard?.card || 'summary_large_image',
+		title: twitterCard?.title || siteMetadata?.twitterCard?.title || _title || '',
+		description: twitterCard?.description || siteMetadata?.twitterCard?.description || _description || '',
+		creator: twitterCard?.creator || siteMetadata?.twitterCard?.creator || '',
+		site: twitterCard?.site || siteMetadata?.twitterCard?.site || '',
+		domain: twitterCard?.domain || siteMetadata?.twitterCard?.domain || '',
+		url: twitterCard?.url || siteMetadata?.twitterCard?.url || '',
+		imageSrc: twitterCard?.imageSrc || siteMetadata?.twitterCard?.imageSrc || '',
+	}
+
+	// To-Do: Find a better place for the default data
+	const _schemaMarkup = schemaMarkup ? schemaMarkup : {
+		'@context': `https://schema.org`,
+		'@type': `Organization`,
+		name: `PixelsMatter`,
+		alternateName: `PM`,
+		description: `Gatsby starter`,
+		url: `https://pixelsmatter.io`,
+		logo: ``,
+		sameAs: [
+			`https://facebook.com/pixelsmatter`,
+			`https://twitter.com/pixelsmatter`,
+			`https://linkedin.com/company/pixelsmatter`,
+			`https://instagram.com/pixelsmatter`,
+			`https://github.com/pixelsmatter`,
+		],
 	}
 
 	return (
@@ -63,109 +98,119 @@ function SEO({description, lang, meta, title, schemaMarkup}) {
 			htmlAttributes={{
 				lang,
 			}}
-			title={title ? title : defaultTitle}
-			titleTemplate={title ? `%s | ${defaultTitle}` : `${defaultTitle} | ${metaDescription}`}
+			title={_title}
+			titleTemplate={_title}
+			description={_description}
 			meta={[
+				// Generic meta
 				{
 					name: `format-detection`,
 					content: `telephone=no`,
 				},
 				{
-					name: `author`,
-					content: `${siteUrl}/${humans}`,
+					name: `description`,
+					content: _description,
 				},
 				{
-					name: `description`,
-					content: metaDescription || ``,
+					name: `author`,
+					content: `${siteUrl}/${humansTxt}`,
+				},
+				// Open Graph
+				{
+					property: `og:type`,
+					content: _openGraph.type,
 				},
 				{
 					property: `og:title`,
-					content: title || defaultTitle,
+					content: _openGraph.title,
 				},
 				{
 					property: `og:description`,
-					content: metaDescription || ``,
-				},
-				{
-					property: `og:url`,
-					content: siteUrl || ``,
+					content: _openGraph.description,
 				},
 				{
 					property: `og:site_name`,
-					content: defaultTitle || ``,
+					content: _openGraph.siteName,
 				},
 				{
-					property: `og:type`,
-					content: `website`,
+					property: `og:url`,
+					content: _openGraph.url,
 				},
 				{
 					property: `og:locale`,
-					content: `en_GB`,
+					content: _openGraph.locale,
 				},
 				{
 					property: `og:image`,
-					content: `${siteUrl}${socialPreview}`,
+					content: `${siteUrl}${_thumbnail}`,
 				},
 				{
 					property: `og:image:width`,
-					content: 1200,
+					content: _openGraph.imageWidth,
 				},
 				{
 					property: `og:image:height`,
-					content: 630,
+					content: _openGraph.imageHeight,
 				},
+				// Twitter
 				{
 					name: `twitter:card`,
-					content: `summary_large_image`,
-				},
-				{
-					name: `twitter:site`,
-					content: author || ``,
-				},
-				{
-					name: `twitter:creator`,
-					content: author || ``,
+					content: _twitterCard.card,
 				},
 				{
 					name: `twitter:title`,
-					content: title || defaultTitle,
+					content: _twitterCard.title,
 				},
 				{
 					name: `twitter:description`,
-					content: metaDescription || ``,
+					content: _twitterCard.description,
 				},
 				{
-					property: `twitter:image:src`,
-					content: `${siteUrl}${socialPreview}`,
+					name: `twitter:creator`,
+					content: _twitterCard.creator,
+				},
+				{
+					name: `twitter:site`,
+					content: _twitterCard.site,
 				},
 				{
 					property: `twitter:domain`,
-					content: domain || ``,
+					content: _twitterCard.domain,
 				},
 				{
 					property: `twitter:url`,
-					content: siteUrl || ``,
+					content: _twitterCard.url,
+				},
+				{
+					property: `twitter:image:src`,
+					content: `${siteUrl}${_thumbnail}`,
 				},
 			].concat(meta)}
 		>
-			<script type='application/ld+json'>
-				{JSON.stringify(schemaMarkup)}
+			{/* Schema Markup */}
+			<script type="application/ld+json">
+				{JSON.stringify(_schemaMarkup)}
 			</script>
 		</Helmet>
 	)
 }
 
 SEO.defaultProps = {
-	lang: `en`,
 	meta: [],
-	description: ``,
+	title: '',
+	description: '',
+	lang: 'en_GB',
 }
 
 SEO.propTypes = {
-	description: PropTypes.string,
-	lang: PropTypes.string,
 	meta: PropTypes.arrayOf(PropTypes.object),
 	title: PropTypes.string,
+	description: PropTypes.string,
+	lang: PropTypes.string,
+	thumbnail: PropTypes.object,
+	openGraph: PropTypes.object,
+	twitterCard: PropTypes.object,
+	schemaMarkup: PropTypes.object,
 }
 
 export default SEO
