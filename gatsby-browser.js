@@ -1,7 +1,4 @@
 
-// Libraries
-import React from 'react'
-
 // Styles
 import './src/scss/style.scss'
 

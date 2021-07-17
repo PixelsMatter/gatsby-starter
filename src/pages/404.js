@@ -10,7 +10,7 @@ import Container from '../components/Container'
 
 const IndexPage = () => (
 	<Layout>
-		<SEO title='404'/>
+		<SEO title='404 | PixelsMatter'/>
 		<Container>
 			<h1>Nothing To See Here</h1>
 			<p>Sorry, we can't seem to find the page you're looking for.</p>
