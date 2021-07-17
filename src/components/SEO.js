@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet'
 import { graphql, useStaticQuery } from 'gatsby'
 
 function SEO({ meta, title, description, lang, thumbnail, openGraph, twitterCard, schemaMarkup }) {
-	const { site, defaultThumbnail } = useStaticQuery(
+	const { site, defaultThumbnail, logo } = useStaticQuery(
 		graphql`
 	 		query {
 	 			site {
@@ -40,6 +40,9 @@ function SEO({ meta, title, description, lang, thumbnail, openGraph, twitterCard
  						}
  					}
  				}
+ 				logo: file(base: {eq: "favicon.png"}) {
+ 					publicURL
+ 				}
 	 		}
  		`
 	)
@@ -48,6 +51,7 @@ function SEO({ meta, title, description, lang, thumbnail, openGraph, twitterCard
 	_title = title || siteMetadata?.title,
 	_description = description || siteMetadata?.description,
 	_thumbnail = defaultThumbnail.childImageSharp.sizes.src || thumbnail,
+	_logo = logo?.publicURL,
 	siteUrl = siteMetadata?.siteUrl || '',
 	humansTxt = siteMetadata?.humansTxt || ''
 
@@ -82,9 +86,9 @@ function SEO({ meta, title, description, lang, thumbnail, openGraph, twitterCard
 		'@type': `Organization`,
 		name: `PixelsMatter`,
 		alternateName: `PM`,
-		description: `Gatsby starter`,
+		description: `Gatsby Starter`,
 		url: `https://pixelsmatter.io`,
-		logo: ``,
+		logo: `${siteUrl}${_logo}`,
 		sameAs: [
 			`https://facebook.com/pixelsmatter`,
 			`https://twitter.com/pixelsmatter`,
