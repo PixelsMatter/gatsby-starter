@@ -18,7 +18,7 @@ module.exports = {
 			description: `Gatsby starter`,
 			creator: `@pixelsmatter`,
 			site: `@pixelsmatter`,
-			domain: `pixelsmatter.op`,
+			domain: `pixelsmatter.io`,
 			url: `https://pixelsmatter.io`,
 		},
 	},
