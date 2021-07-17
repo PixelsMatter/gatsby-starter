@@ -1,13 +1,7 @@
-/*
-* Layout component that queries for data
-* with Gatsby's useStaticQuery component
-*
-* See: https://www.gatsbyjs.com/docs/use-static-query/
-*/
 
 // Libraries
 import React from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 // Components
 import SEO from '../components/SEO'
@@ -15,7 +9,7 @@ import CookieConsent from './CookieConsent'
 import Footer from './Footer'
 import JsNotice from './JsNotice'
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
 
 	return (
 		<>

@@ -1,9 +1,10 @@
+
 // Libraries
 import React from 'react'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 
 // Images
-import logoPath from '../img/pixelsmatter-logo.svg'
+import logoPath from '../img/logo.svg'
 
 /*
 * gatsby image is not required here as SVG is vector based 
