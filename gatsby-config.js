@@ -23,22 +23,6 @@ module.exports = {
 			url: `https://pixelsmatter.io`,
 			imageSrc: ``,
 		},
-		schemaMarkup: {
-			context: `https://schema.org`,
-			type: `Organization`,
-			name: `PixelsMatter`,
-			alternateName: `PM`,
-			description: `Gatsby starter`,
-			url: `https://pixelsmatter.io`,
-			logo: ``,
-			sameAs: [
-				'https://facebook.com/pixelsmatter',
-				'https://twitter.com/pixelsmatter',
-				'https://linkedin.com/company/pixelsmatter',
-				'https://instagram.com/pixelsmatter',
-				'https://github.com/pixelsmatter',
-			],
-		}
 	},
 	plugins: [
 		`gatsby-plugin-preact`,
