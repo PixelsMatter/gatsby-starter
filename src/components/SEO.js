@@ -45,7 +45,7 @@ function SEO({ meta, title, description, lang, thumbnail, openGraph, twitterCard
 	)
 
 	const siteMetadata = site?.siteMetadata,
-	_title = title ? `${title} | ${siteMetadata?.title}` : siteMetadata?.title,
+	_title = title || siteMetadata?.title,
 	_description = description || siteMetadata?.description,
 	_thumbnail = defaultThumbnail.childImageSharp.sizes.src || thumbnail,
 	siteUrl = siteMetadata?.siteUrl || '',
