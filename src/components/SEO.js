@@ -1,11 +1,12 @@
+
 // Libraries
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Helmet} from 'react-helmet'
-import {graphql, useStaticQuery} from 'gatsby'
+import { Helmet } from 'react-helmet'
+import { graphql, useStaticQuery } from 'gatsby'
 
-function SEO({meta, title, description, lang, thumbnail, openGraph, twitterCard, schemaMarkup}) {
-	const {site, defaultThumbnail} = useStaticQuery(
+function SEO({ meta, title, description, lang, thumbnail, openGraph, twitterCard, schemaMarkup }) {
+	const { site, defaultThumbnail } = useStaticQuery(
 		graphql`
 	 		query {
 	 			site {
