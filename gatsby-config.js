@@ -11,7 +11,6 @@ module.exports = {
 			description: `Gatsby starter`,
 			siteName: `PixelsMatter`,
 			url: `https://pixelsmatter.io`,
-			image: ``,
 		},
 		twitterCard: {
 			card: `summary_large_image`,
@@ -21,7 +20,6 @@ module.exports = {
 			site: `@pixelsmatter`,
 			domain: `pixelsmatter.op`,
 			url: `https://pixelsmatter.io`,
-			imageSrc: ``,
 		},
 	},
 	plugins: [
