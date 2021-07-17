@@ -1,10 +1,4 @@
 
-/*
-* Implement Gatsby's Browser APIs in this file.
-*
-* See: https://www.gatsbyjs.com/docs/browser-apis/
-*/
-
 // Libraries
 import React from 'react'
 
@@ -25,4 +19,4 @@ ______ _          _     ___  ___      _   _
 Like our code? Get in touch!
 hello@pixelsmatter.io                                                       
                                                        
-`);
+`)
