@@ -1,5 +1,9 @@
 # Gatsby Starter
 
+![GitHub last commit](https://img.shields.io/github/last-commit/PixelsMatter/gatsby-starter?color=%23560bad)
+![GitHub repo size](https://img.shields.io/github/repo-size/PixelsMatter/gatsby-starter?color=%23560bad)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/PixelsMatter/gatsby-starter/Lighthouse%20CI?color=%23560bad)
+
 The PixelsMatter Gatsby Starter. Includes Preact, SCSS using a variant of 7-1 architecture, BEM, perfect Lighthouse scores, offline support, Google Analytics, sitemaps &amp; plenty more good stuff!
 
 
