@@ -29,3 +29,5 @@ Run the following from the project root directory:
 |Name|URL|
 |--|--|
 | Local | [http://localhost:8000](http://localhost:8000) |
+| Staging | N/A |
+| Production | N/A |
