@@ -18,7 +18,7 @@ The PixelsMatter Gatsby Starter. Includes Preact, SCSS using a variant of 7-1 ar
 
 ## Installation
 
-Run the following from the root directory:
+Run the following from the project root directory:
 
  1. `npm i`
  2. `gatsby develop` (Local) or `gatsby build && gatsby serve` (Production)
