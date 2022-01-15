@@ -24,6 +24,17 @@ Run the following from the project root directory:
  2. `gatsby develop` (Local) or `gatsby build && gatsby serve` (Production)
  7. Visit relevant URL specified in the Environments section
 
+## Scripts
+
+| Command | Description                                  |
+| --------  | -------------------------------------------- |
+| `build`   | Builds the site for production               |
+| `develop` | Starts the local development server          |
+| `start`   | Starts the local development server          |
+| `format ` | Formats code using Prettier                  |
+| `serve`   | Serves the production build                  |
+| `clean`   | Clears the `.cache` and `public` directories |
+
 ## Environments
 
 |Name|URL|
